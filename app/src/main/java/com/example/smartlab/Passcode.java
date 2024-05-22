@@ -12,6 +12,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 public class Passcode extends AppCompatActivity {
 EditText one;
@@ -20,12 +21,14 @@ EditText three;
 EditText four;
 ImageButton backspace;
 String code;
+TextView skipi;
 
     @SuppressLint({"MissingInflatedId", "WrongViewCast"})
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_passcode);
+        skipi = findViewById(R.id.skipi);
     one = findViewById(R.id.pass1);
     two = findViewById(R.id.pass2);
     three = findViewById(R.id.pass3);
@@ -132,7 +135,13 @@ for (Button button: buttons){
         }
     });
 }
-
+skipi.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        Intent intent = new Intent(Passcode.this, Karta.class);
+        startActivity(intent);
+    }
+});
     }
 private void onNumberButtonCLick(String number){
         if(one.getText().toString().isEmpty()){
