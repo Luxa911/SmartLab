@@ -4,136 +4,216 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".Passcode">
 
-    <EditText
-        android:id="@+id/pass3"
-        android:layout_width="16dp"
-        android:layout_height="16dp"
-        android:layout_marginStart="10dp"
-        android:background="@drawable/passcoden"
-        android:cursorVisible="false"
-        android:ems="10"
-        android:inputType="numberPassword"
-        android:textColor="#1A6FEE"
-        app:layout_constraintBottom_toTopOf="@+id/b1"
-        app:layout_constraintStart_toEndOf="@+id/pass2"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="64dp"
+        app:layout_constraintBottom_toTopOf="@+id/b2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView9"
-        app:layout_constraintVertical_bias="0.451" />
+        app:layout_constraintVertical_bias="0.0">
 
-    <EditText
-        android:id="@+id/pass4"
-        android:layout_width="16dp"
-        android:layout_height="16dp"
+        <EditText
+            android:id="@+id/pass3"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/passcoden"
+            android:cursorVisible="false"
+            android:ems="10"
+            android:inputType="numberPassword"
+            android:textColor="#1A6FEE"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/pass2"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/pass4"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/passcoden"
+            android:cursorVisible="false"
+            android:ems="10"
+            android:inputType="numberPassword"
+            android:textColor="#1A6FEE"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/pass3"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/pass1"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/passcoden"
+            android:cursorVisible="false"
+            android:ems="10"
+            android:inputType="numberPassword"
+            android:textColor="#1A6FEE"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/pass2"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/passcoden"
+            android:cursorVisible="false"
+            android:ems="10"
+            android:inputType="numberPassword"
+            android:textColor="#1A6FEE"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/pass1"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="356dp"
+        android:layout_height="445dp"
         android:layout_marginStart="10dp"
-        android:background="@drawable/passcoden"
-        android:cursorVisible="false"
-        android:ems="10"
-        android:inputType="numberPassword"
-        android:textColor="#1A6FEE"
-        app:layout_constraintBottom_toTopOf="@+id/b1"
-        app:layout_constraintStart_toEndOf="@+id/pass3"
-        app:layout_constraintTop_toBottomOf="@+id/textView9"
-        app:layout_constraintVertical_bias="0.451" />
-
-    <Button
-        android:id="@+id/b0"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="164dp"
-        android:layout_marginBottom="50dp"
-        android:background="@drawable/keyboard"
-        android:text="0"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2"
+        app:layout_constraintVertical_bias="1.0">
 
-    <Button
-        android:id="@+id/b6"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="264dp"
-        android:layout_marginBottom="20dp"
-        android:background="@drawable/keyboard"
-        android:text="6"
-        app:layout_constraintBottom_toTopOf="@+id/b9"
-        app:layout_constraintStart_toStartOf="parent" />
+        <Button
+            android:id="@+id/b1"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="7dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/keyboard"
+            android:text="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.156"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/b7"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="64dp"
-        android:layout_marginBottom="20dp"
-        android:background="@drawable/keyboard"
-        android:text="7"
-        app:layout_constraintBottom_toTopOf="@+id/b0"
-        app:layout_constraintStart_toStartOf="parent" />
+        <Button
+            android:id="@+id/b2"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/keyboard"
+            android:text="2"
+            app:layout_constraintStart_toEndOf="@+id/b1"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/b8"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="164dp"
-        android:layout_marginBottom="20dp"
-        android:background="@drawable/keyboard"
-        android:text="8"
-        app:layout_constraintBottom_toTopOf="@+id/b0"
-        app:layout_constraintStart_toStartOf="parent" />
+        <Button
+            android:id="@+id/b3"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="24dp"
+            android:background="@drawable/keyboard"
+            android:text="3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/b2"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/b9"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="264dp"
-        android:layout_marginBottom="20dp"
-        android:background="@drawable/keyboard"
-        android:text="9"
-        app:layout_constraintBottom_toTopOf="@+id/b0"
-        app:layout_constraintStart_toStartOf="parent" />
+        <Button
+            android:id="@+id/b4"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/keyboard"
+            android:text="4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/b1" />
 
-    <Button
-        android:id="@+id/b4"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="64dp"
-        android:layout_marginBottom="20dp"
-        android:background="@drawable/keyboard"
-        android:text="4"
-        app:layout_constraintBottom_toTopOf="@+id/b7"
-        app:layout_constraintStart_toStartOf="parent" />
+        <Button
+            android:id="@+id/b5"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/keyboard"
+            android:text="5"
+            app:layout_constraintStart_toEndOf="@+id/b4"
+            app:layout_constraintTop_toBottomOf="@+id/b2" />
 
-    <Button
-        android:id="@+id/b5"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="164dp"
-        android:layout_marginBottom="20dp"
-        android:background="@drawable/keyboard"
-        android:text="5"
-        app:layout_constraintBottom_toTopOf="@+id/b8"
-        app:layout_constraintStart_toStartOf="parent" />
+        <Button
+            android:id="@+id/b6"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/keyboard"
+            android:text="6"
+            app:layout_constraintStart_toEndOf="@+id/b5"
+            app:layout_constraintTop_toBottomOf="@+id/b3" />
 
-    <Button
-        android:id="@+id/b2"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginBottom="20dp"
-        android:background="@drawable/keyboard"
-        android:text="2"
-        app:layout_constraintBottom_toTopOf="@+id/b5"
-        app:layout_constraintStart_toEndOf="@+id/b1" />
+        <Button
+            android:id="@+id/b7"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/keyboard"
+            android:text="7"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/b4" />
 
-    <Button
-        android:id="@+id/b3"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginBottom="20dp"
-        android:background="@drawable/keyboard"
-        android:text="3"
-        app:layout_constraintBottom_toTopOf="@+id/b6"
-        app:layout_constraintStart_toEndOf="@+id/b2" />
+        <Button
+            android:id="@+id/b8"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/keyboard"
+            android:text="8"
+            app:layout_constraintStart_toEndOf="@+id/b7"
+            app:layout_constraintTop_toBottomOf="@+id/b5" />
+
+        <Button
+            android:id="@+id/b9"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/keyboard"
+            android:text="9"
+            app:layout_constraintStart_toEndOf="@+id/b8"
+            app:layout_constraintTop_toBottomOf="@+id/b6" />
+
+        <Button
+            android:id="@+id/b0"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="140dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/keyboard"
+            android:text="0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/b8" />
+
+        <ImageButton
+            android:id="@+id/backspace"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="32dp"
+            android:background="@color/white"
+            app:layout_constraintStart_toEndOf="@+id/b0"
+            app:layout_constraintTop_toBottomOf="@+id/b9"
+            app:srcCompat="@drawable/delicon" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <TextView
         android:id="@+id/textView9"
@@ -147,7 +227,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
     <TextView
-        android:id="@+id/textView10"
+        android:id="@+id/skipi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -170,57 +250,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/b1"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="64dp"
-        android:layout_marginBottom="20dp"
-        android:background="@drawable/keyboard"
-        android:text="1"
-        app:layout_constraintBottom_toTopOf="@+id/b4"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <ImageButton
-        android:id="@+id/backspace"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="36dp"
-        android:background="@color/white"
-        app:layout_constraintStart_toEndOf="@+id/b0"
-        app:layout_constraintTop_toBottomOf="@+id/b9"
-        app:srcCompat="@drawable/delicon" />
-
-    <EditText
-        android:id="@+id/pass1"
-        android:layout_width="16dp"
-        android:layout_height="16dp"
-        android:layout_marginStart="156dp"
-        android:background="@drawable/passcoden"
-        android:cursorVisible="false"
-        android:ems="10"
-        android:inputType="numberPassword"
-        android:textColor="#1A6FEE"
-        app:layout_constraintBottom_toTopOf="@+id/b1"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView9"
-        app:layout_constraintVertical_bias="0.451" />
-
-    <EditText
-        android:id="@+id/pass2"
-        android:layout_width="16dp"
-        android:layout_height="16dp"
-        android:layout_marginStart="10dp"
-        android:background="@drawable/passcoden"
-        android:cursorVisible="false"
-        android:ems="10"
-        android:inputType="numberPassword"
-        android:textColor="#1A6FEE"
-        app:layout_constraintBottom_toTopOf="@+id/b1"
-        app:layout_constraintStart_toEndOf="@+id/pass1"
-        app:layout_constraintTop_toBottomOf="@+id/textView9"
-        app:layout_constraintVertical_bias="0.451" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
