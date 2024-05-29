@@ -11,12 +11,17 @@ import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class Hello extends AppCompatActivity {
     EditText mail;
     Button next;
-    Boolean click = false;
-
+    private String jwtToken= "ed842a65-a06c-4019-b1f2-d7f451206156";
+private ApiService apiService;
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +29,7 @@ public class Hello extends AppCompatActivity {
         setContentView(R.layout.activity_hello);
         mail = findViewById(R.id.editTextTextEmailAddress);
         next = findViewById(R.id.next);
+        apiService = ApiClient.getRetrofitInstance(jwtToken).create(ApiService.class);
         mail.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -48,7 +54,33 @@ public class Hello extends AppCompatActivity {
         });
     }
     public void next(View view) {
-        Intent intent = new Intent(this, Confirm.class);
-        startActivity(intent);
+        String email = mail.getText().toString();
+        if(!email.isEmpty()) {
+            sendCodeToEmail(email);
+            Intent intent = new Intent(this, Confirm.class);
+            startActivity(intent);
+        }
+        else{
+            Toast.makeText(Hello.this,"Please enter an email",Toast.LENGTH_SHORT).show();
+        }
+    }
+    private void sendCodeToEmail(String email){
+        SendCodeRequest request = new SendCodeRequest(email);
+        apiService.sendcode("Bearer "+jwtToken,request).enqueue(new Callback<SendCodeResponse>() {
+            @Override
+            public void onResponse(Call<SendCodeResponse> call, Response<SendCodeResponse> response) {
+                if(response.isSuccessful()&&response.body()!=null){
+                    Toast.makeText(Hello.this,response.body().getMessage(), Toast.LENGTH_SHORT).show();
+                }
+                else{
+                    Toast.makeText(Hello.this,"Failed to send code", Toast.LENGTH_SHORT).show();
+                }
+            }
+
+            @Override
+            public void onFailure(Call<SendCodeResponse> call, Throwable t) {
+Toast.makeText(Hello.this,t.getMessage(),Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 }
