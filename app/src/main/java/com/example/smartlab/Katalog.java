@@ -27,7 +27,7 @@ private List<CatalogItem> catalogItems;
 
     @SuppressLint("MissingInflatedId")
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {g
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_katalog);
         catalogList = findViewById(R.id.catalog_list);
