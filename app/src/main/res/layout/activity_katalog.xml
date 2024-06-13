@@ -7,10 +7,10 @@
     tools:context=".Katalog">
 
     <EditText
-        android:id="@+id/search_bar"
+        android:id="@+id/search"
         android:layout_width="335dp"
         android:layout_height="48dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="16dp"
         android:background="@drawable/search"
         android:drawableStart="@drawable/ic_search"
         android:hint="Искать анализы"
@@ -29,7 +29,7 @@
         android:textColor="#939396"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/search_bar" />
+        app:layout_constraintTop_toBottomOf="@+id/search" />
 
     <HorizontalScrollView
         android:id="@+id/horizontalScrollView"
@@ -39,11 +39,22 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/news_title">
 
-        <LinearLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/NewsLayout"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:orientation="vertical"></LinearLayout>
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </HorizontalScrollView>
 
     <TextView
@@ -137,30 +148,35 @@
         android:gravity="bottom"
         app:layout_constraintBottom_toBottomOf="parent">
 
-        <TextView
+        <ImageView
+            android:id="@+id/imageView8"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Анализы"
-            android:gravity="center" />
-        <TextView
+            app:srcCompat="@drawable/botb1click" />
+
+        <ImageView
+            android:id="@+id/imageView10"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Результаты"
-            android:gravity="center" />
-        <TextView
+            app:srcCompat="@drawable/bottomb2" />
+
+        <ImageView
+            android:id="@+id/imageView11"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Поддержка"
-            android:gravity="center" />
-        <TextView
+            app:srcCompat="@drawable/bottomb3" />
+
+        <ImageView
+            android:id="@+id/profilebuttom"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Профиль"
-            android:gravity="center" />
+            android:clickable="true"
+            app:srcCompat="@drawable/bottomb4" />
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

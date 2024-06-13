@@ -14,6 +14,8 @@ public interface ApiService {
     @POST("create_patient")
     Call<Void> createPatient(@Body PatientData patientData);
 
+    @GET("news")
+    Call<List<News>> getNews();
 }
 class EmailRequest{
     private String email;

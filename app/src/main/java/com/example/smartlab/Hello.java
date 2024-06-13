@@ -28,6 +28,7 @@ public class Hello extends AppCompatActivity {
     EditText mail;
     Button next;
     ApiService apiService;
+    Button yan;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -35,8 +36,16 @@ public class Hello extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hello);
         mail = findViewById(R.id.editTextTextEmailAddress);
+        yan = findViewById(R.id.yan);
         next = findViewById(R.id.next);
         apiService = ApiClient.getClient().create(ApiService.class);
+        yan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent2 = new Intent(Hello.this, Confirm.class);
+                startActivity(intent2);
+            }
+        });
         mail.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -90,4 +99,5 @@ Toast.makeText(Hello.this,"Failed2", Toast.LENGTH_SHORT).show();
             }
         });
     }
+
 }

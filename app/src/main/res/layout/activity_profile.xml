@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Profile">
+
+    <ImageView
+        android:id="@+id/ava"
+        android:layout_width="115dp"
+        android:layout_height="94dp"
+        android:layout_marginTop="8dp"
+        android:clickable="true"
+        android:src="@drawable/baseline_photo_camera_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Карта пациента"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Без карты пациента вы не сможете заказать анализы."
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ava" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="335dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:text="В картах пациентов будут храниться результаты анализов вас и ваших близких."
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.315"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+    <EditText
+        android:id="@+id/imya"
+        android:layout_width="370dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/editmail"
+        android:ems="10"
+        android:hint="Имя"
+        android:inputType="text"
+        android:paddingLeft="15dp"
+        android:textColorHint="#939396"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView16" />
+
+    <EditText
+        android:id="@+id/otchestvo"
+        android:layout_width="370dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/editmail"
+        android:ems="10"
+        android:hint="Отчество"
+        android:inputType="text"
+        android:paddingLeft="15dp"
+        android:textColorHint="#939396"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imya" />
+
+    <EditText
+        android:id="@+id/familia"
+        android:layout_width="370dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/editmail"
+        android:ems="10"
+        android:hint="Фамилия"
+        android:inputType="text"
+        android:paddingLeft="15dp"
+        android:textColorHint="#939396"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/otchestvo" />
+
+    <TextView
+        android:id="@+id/birdth"
+        android:layout_width="370dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/editmail"
+        android:ems="10"
+        android:gravity="center|left"
+        android:hint="Дата рождения"
+        android:paddingLeft="15dp"
+        android:textColorHint="#939396"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/familia" />
+
+    <FrameLayout
+        android:id="@+id/frame"
+        android:layout_width="400dp"
+        android:layout_height="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/birdth">
+
+        <TextView
+            android:id="@+id/gender"
+            android:layout_width="370dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/editmail"
+            android:gravity="center|left"
+            android:hint="Пол"
+            android:paddingLeft="15dp"
+            android:textColorHint="#939396"
+            android:textSize="18sp" />
+
+        <Spinner
+            android:id="@+id/genderSpin"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="350dp"
+            android:layout_marginTop="38dp"
+            android:background="@drawable/icons"
+            android:spinnerMode="dropdown"
+            tools:ignore="MissingConstraints" />
+
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/update"
+        android:layout_width="355dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/buttonb"
+        android:clickable="false"
+        android:enabled="false"
+        android:text="Сохранить"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        app:cornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frame" />
+    />
+    <LinearLayout
+        android:id="@+id/bottom_nav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="bottom"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageView
+            android:id="@+id/imageViewfirst"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/bottomb1" />
+
+        <ImageView
+            android:id="@+id/imageVietwo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/bottomb2" />
+
+        <ImageView
+            android:id="@+id/imageViewthree"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/bottomb3" />
+
+        <ImageView
+            android:id="@+id/profilebutton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            app:srcCompat="@drawable/profilebun" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
