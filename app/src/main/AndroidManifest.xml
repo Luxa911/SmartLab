@@ -19,7 +19,7 @@
             android:name=".Profile"
             android:exported="false" />
         <activity
-            android:name=".Katalog"
+            android:name=".katalog"
             android:exported="false" />
         <activity
             android:name=".Karta"

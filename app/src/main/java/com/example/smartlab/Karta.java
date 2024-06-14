@@ -101,7 +101,7 @@ create.setOnClickListener(new View.OnClickListener() {
         String gender1 = genderView.getText().toString();
         PatientData patientData = new PatientData(name1,fam1,otch1,formattedBirthDate,gender1);
         sendPatientDataToServer(patientData);
-        Intent intent = new Intent(Karta.this, Katalog.class);
+        Intent intent = new Intent(Karta.this, katalog.class);
         startActivity(intent);
     }
 });
